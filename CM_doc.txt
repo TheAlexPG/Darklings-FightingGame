@@ -1,25 +1,38 @@
-Check the production branch for stable releases.
-Check the development or the latest numbered version branch for the latest releases.
-Mechanical Features
-
-These features do not include everything in the game but rather more mechanically interesting things to point out from a developer's perspective.
-
-Technical Features	Game Features	Controller Features
-Deterministic Physics	Local Multiplayer	Controllers Support
-Deterministic Animations	Pixel Skin Change	Dynamic Prompts
-State Machine	Hitstop System	Rebinding
-Streaming Videos	Dialogue System	
-Pixel Perfect Camera	Replay System	
-60FPS Logic Tick	AI Opponent	
-Rollback Implementation	Lobby System	
-Testing Online
-
-Open two instances of Unity using ParrelSync (https://github.com/VeriorPies/ParrelSync).
-Load the 'GameScene' for both instances and start the game.
-In one of the two instances press the '2' key to change the player index to 1.
-In both instances press the '5' key to start the GGPO connection and you're good to go.
-Optional: use Clumsy (https://github.com/jagt/clumsy) to simulate lag.
-
-Sub Repositories
-
-These are the sub-repositories that help make Darklings in one way or another.
+# Architecture Metadata
+**Project Name**: DARKLINGS - Fighting Game
+**Project Description**: DARKLINGS is a free-to-play 2D fighting game that aims to be accessible to a wide range of players. The game features periodic updates and utilizes rollback netcode to ensure smooth online multiplayer experiences. It includes various technical and gameplay features to enhance player engagement and ensure a high-quality fighting game experience.
+**General Architecture Approach**: The architecture of DARKLINGS focuses on deterministic systems to maintain consistency in game states across networked play. It employs a state machine for managing game states and transitions and integrates a rollback netcode for smooth online play. The design emphasizes accessibility, modularity, and scalability, allowing for continuous updates and feature additions.
+**Main frameworks used**:
+ - Unity3D
+ - Rollback Netcode (GGPO)
+ - ParrelSync (for testing multiplayer locally)
+**Project Features**:
+ - Accessibility for beginners and experienced players
+ - Rollback netcode for low-latency online play
+ - Deterministic physics and animations
+ - Local multiplayer with controller support
+ - Replay system for recording and replaying matches
+ - AI opponent for practice and solo play
+ - Lobby system for online matchmaking
+ - Dialogue system for in-game character interactions
+ - Pixel-perfect camera
+ - 60FPS logic tick
+**Basic project's entities**:
+ - Player: Represents the player character in the game
+ - AI Opponent: Represents the non-player character controlled by the game's AI
+ - Lobby: Manages player matchmaking and connections
+ - Replay: Handles recording and playback of game matches
+ - Dialogue: Manages in-game character dialogues
+**Rules**:
+ - Ensure deterministic behavior in all game systems
+ - Maintain a consistent 60FPS logic tick
+ - Implement hitstop and state machines for combat mechanics
+ - Use rollback netcode for all online multiplayer interactions
+**Restrictions**:
+ - The project is open-source for educational purposes only and cannot be used commercially without permission.
+ - Consistency in deterministic systems must be maintained across all game features.
+**Rendering approach:** The game uses the Universal Render Pipeline (URP) to achieve high fidelity and performance. URP is chosen for its ability to provide optimized graphics rendering, ensuring smooth gameplay even on lower-end devices. This includes enhanced lighting and shading techniques, post-processing effects, and support for 2D pixel-perfect rendering. The pipeline is configured to deliver clear and vibrant visuals while maintaining performance and scalability.
+**Other Assets:**
+ - ParrelSync for testing multiplayer
+ - Clumsy for simulating network lag
+ - Various Unity asset packages for graphics, animations, and UI elements
