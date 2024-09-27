@@ -1,7 +1,7 @@
 # Architecture Metadata
 **Project Name**: DARKLINGS - Fighting Game
 **Project Description**: DARKLINGS is a free-to-play 2D fighting game that aims to be accessible to a wide range of players. The game features periodic updates and utilizes rollback netcode to ensure smooth online multiplayer experiences. It includes various technical and gameplay features to enhance player engagement and ensure a high-quality fighting game experience.
-**General Architecture Approach**: The architecture of DARKLINGS focuses on deterministic systems to maintain consistency in game states across networked play. It employs a state machine for managing game states and transitions and integrates a rollback netcode for smooth online play. The design emphasizes accessibility, modularity, and scalability, allowing for continuous updates and feature additions.
+**General Architecture Approach**: The architecture of DARKLINGS focuses on deterministic systems to maintain consistency in game states across networked play. It employs a state machine for managing game states and transitions and integrates a rollback netcode for smooth online play. The design emphasizes accessibility, modularity, and scalability, allowing for continuous updates and feature additions. HEHE
 **Main frameworks used**:
  - Unity3D
  - Rollback Netcode (GGPO)
