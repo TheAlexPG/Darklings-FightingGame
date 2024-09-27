@@ -11,6 +11,12 @@ public class CameraShake : MonoBehaviour
     private float _shakeTimer;
     private float _zoomTimer;
     private int _defaultZoom;
+    private Lolkekx;
+
+
+    void KEK()
+    {
+    }
 
     void Awake()
     {
